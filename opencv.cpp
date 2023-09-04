@@ -27,7 +27,7 @@ bool pixelIsYellow(cv::Vec<unsigned char, 3>& currentCell)
 bool pixelIsGrey(cv::Vec<unsigned char, 3>& currentCell)
 {
     return currentCell[0] == currentCell[1] && currentCell[1] == currentCell[2] && 
-   (int)currentCell[0] >= 221 && (int)currentCell[0] <= 232;
+   (int)currentCell[0] >= 219 && (int)currentCell[0] <= 237;
 }
 
 bool GreyPixelAround(cv::Vec<unsigned char, 3> currentCell, cv::Vec<unsigned char, 3> firstPreviewCell, 
@@ -104,6 +104,7 @@ int main( int argc, char* argv[])
    
    cv::imshow("test",J);
    cv::waitKey(); 
+   cv::imwrite("new_image.jpg",J);
    return 0;
 }
 
