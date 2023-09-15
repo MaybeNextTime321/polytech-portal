@@ -3,14 +3,20 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
+int main(int argc, char* argv[]){
+
+    if (argc <= 1){
+
+        std::cout << "Not enough parameters" << std::endl;
+        return -1;
+    }
+
 	tesseract::TessBaseAPI tess;
 	tess.Init(NULL,"eng+rus");
-	
+
 	tess.SetPageSegMode(tesseract::PSM_AUTO);
 
-	Pix * image = pixRead("Result 2.jpg");
+	Pix * image = pixRead(argv[1]);
 	tess.SetImage(image);
 
 	tess.Recognize(0);
