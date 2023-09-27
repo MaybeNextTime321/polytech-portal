@@ -29,7 +29,7 @@ bool PixelIsYellow(cv::Vec<unsigned char, 3>& current_cell){
 bool PixelIsGrey(cv::Vec<unsigned char, 3>& current_cell){
 
     return current_cell[0] == current_cell[1] && current_cell[1] == current_cell[2] && 
-   (int)current_cell[0] >= 219 && (int)current_cell[0] <= 237;
+   (int)current_cell[0] >= 215 && (int)current_cell[0] <= 240;
 }
 
 bool GreyPixelAround(cv::Vec<unsigned char, 3> currentCell, cv::Vec<unsigned char, 3> firstPreviewCell, 
@@ -87,6 +87,11 @@ Mat& SplitToSingleQuestions(Mat& I, const uchar* const table){
    }
 
    int last_line = -1;
+
+   Vec3b grey_color;
+   grey_color.val[0] = 227;
+   grey_color.val[1] = 227;
+   grey_color.val[2] = 227;
    for(int i : line_change){
 
       int counter = 0; 
@@ -95,6 +100,7 @@ Mat& SplitToSingleQuestions(Mat& I, const uchar* const table){
          cv::Vec<unsigned char, 3> pixel = I.at<Vec3b>(i,j);
          
          if(pixel[0] == 0 && pixel[1] == 255 && pixel[2] == 255){
+            I.at<Vec3b>(i,j) = grey_color;
             ++counter;
          }
 
