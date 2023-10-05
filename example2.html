@@ -1,0 +1,821 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="origin-trial" content="ArNBN7d1AkvMhJTGWXlJ8td/AN4lOokzOnqKRNkTnLqaqx0HpfYvmx8JePPs/emKh6O5fckx14LeZIGJ1AQYjgAAAABzeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0OjE4MDAwIiwiZmVhdHVyZSI6IkRpc2FibGVEaWZmZXJlbnRPcmlnaW5TdWJmcmFtZURpYWxvZ1N1cHByZXNzaW9uIiwiZXhwaXJ5IjoxNjM5NTI2Mzk5fQ==">
+
+
+
+
+  <title>
+
+ PHYLOS Courseware | Открытое образование
+</title>
+
+
+  
+
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/i18n/en/djangojs.705ead69114e.js"></script>
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/ie11_find_array.bd1c6dc7a133.js"></script>
+  
+  <link rel="icon" type="image/x-icon" href="https://cdn2.openedu.ru/static/edx-theme/images/favicon.bd3d272022e9.ico"/>
+
+
+
+  
+  
+
+    <link href="https://cdn2.openedu.ru/static/edx-theme/css/lms-style-vendor.68e48093f5dd.css" rel="stylesheet" type="text/css" />
+
+
+
+    
+  
+
+    <link href="https://cdn2.openedu.ru/static/edx-theme/css/lms-main-v1.1196926a8475.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    
+    
+<script type="text/javascript" src="https://cdn2.openedu.ru/static/js/lms-main_vendor.3c3c9a2604d6.js" charset="utf-8"></script>
+
+
+    
+    
+<script type="text/javascript" src="https://cdn2.openedu.ru/static/js/lms-application.5ba2aca48790.js" charset="utf-8"></script>
+
+
+
+  
+    
+    
+    <script type="text/javascript" src="https://cdn2.openedu.ru/static/bundles/commons.e8d179ce07e077c34d02.c2509f591d43.js" ></script>
+
+
+
+  <script>
+    window.baseUrl = "https://cdn2.openedu.ru/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/lms/js/require-config.38226099c6ad.js"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button.d4cfaf3361fa',
+'js/views/message_banner': 'js/views/message_banner.141974fd4f5d',
+'moment': 'common/js/vendor/moment-with-locales.e3cc27d412a1',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.60142e6c4416',
+'js/courseware/course_info_events': 'js/courseware/course_info_events.2fc35b57627f',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/dateutil_factory': 'js/dateutil_factory.a28baef97506',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.474ff5ba9de3',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.5e55252d0ace',
+'js/courseware/courseware_factory': 'js/courseware/courseware_factory.1504fc10caef',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.ca68388d81d6',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory.2e10d9097343',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'hls': 'common/js/vendor/hls.5e0c7e1b3bfd'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+  
+
+  
+
+    <link href="https://cdn2.openedu.ru/static/edx-theme/css/lms-style-course-vendor.cc467ea1c47d.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+
+    <link href="https://cdn2.openedu.ru/static/edx-theme/css/lms-course.538c4610e8a6.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<script type="text/javascript" src="https://cdn2.openedu.ru/static/js/jquery.autocomplete.964a0bfb4fd2.js" async></script>
+<script type="text/javascript" src="https://cdn2.openedu.ru/static/js/src/tooltip_manager.b8fa94d4cefc.js" async></script>
+
+<link href="https://cdn2.openedu.ru/static/css/vendor/jquery.autocomplete.css" rel="preload" type="text/css">
+  
+
+  <base target="_parent">
+
+<script type="text/javascript">
+  var $$course_id = "course\u002Dv1:spbstu+PHYLOS+fall_2022_z";
+</script>
+
+
+  
+
+  
+
+
+  
+
+
+<script type="application/json" id="user-metadata">
+    null
+</script>
+
+  
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  
+
+  <meta name="openedx-release-line" content="maple" />
+
+
+
+
+
+</head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_en">
+
+
+
+<div id="page-prompt"></div>
+    
+    <a class="nav-skip sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="marketing-hero"></div>
+
+    <div class="content-wrapper main-container" id="content" dir="ltr">
+      
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%> <% // xss-lint: disable=underscore-not-escaped %>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%- largeALT %>, <%- gettext('Large') %>" src="<%- largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+<div class="course-wrapper chromeless">
+  <section class="course-content" id="course-content"      data-enable-completion-on-view-service="false"     style="display: block; width: auto; margin: 0;"
+  >
+      <main id="main" aria-label="Content">
+        
+<div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:spbstu+PHYLOS+fall_2022_z" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@vertical+block@5c1c8cbf0426403cab0de71c993aded3" data-request-token="2ba81d3c636b11ee932cf6993726f066" data-graded="True" data-has-score="False">
+  
+
+
+
+
+
+    <h4 class="hd-8 de-emphasized">This content is graded
+        as <td>'Самостоятельная работа'</td><br>
+        weight:&nbsp;1.0
+    </h4>
+
+
+<div class="vert-mod">
+    <div class="vert vert-0" data-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@7bc75d3157e74af2a19d91baf906066b">
+        
+<div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:spbstu+PHYLOS+fall_2022_z" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@7bc75d3157e74af2a19d91baf906066b" data-request-token="2ba81d3c636b11ee932cf6993726f066" data-graded="True" data-has-score="True">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Problem"}
+  </script>
+  <div id="problem_7bc75d3157e74af2a19d91baf906066b" class="problems-wrapper" role="group"
+     aria-labelledby="7bc75d3157e74af2a19d91baf906066b-problem-title"
+     data-problem-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@7bc75d3157e74af2a19d91baf906066b" data-url="/courses/course-v1:spbstu+PHYLOS+fall_2022_z/xblock/block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@7bc75d3157e74af2a19d91baf906066b/handler/xmodule_handler"
+     data-problem-score="2.0"
+     data-problem-total-possible="2.0"
+     data-attempts-used="1"
+     data-content="
+
+
+
+&lt;h3 class=&#34;hd hd-3 problem-header&#34; id=&#34;7bc75d3157e74af2a19d91baf906066b-problem-title&#34; aria-describedby=&#34;block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@7bc75d3157e74af2a19d91baf906066b-problem-progress&#34; tabindex=&#34;-1&#34;&gt;
+  Задание 1
+&lt;/h3&gt;
+
+&lt;div class=&#34;problem-progress&#34; id=&#34;block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@7bc75d3157e74af2a19d91baf906066b-problem-progress&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;problem&#34;&gt;
+  &lt;div&gt;
+&lt;p&gt;Прочитайте фрагмент текста Ж.-П. Сартра из работы «Экзистенциализм – это гуманизм» // Сартр Ж.П. Тошнота. Избр. произведения.  – М., 1994. – С. 443 – 445. &lt;/p&gt;
+&lt;p&gt;Ответьте на вопросы в конце текста. &lt;/p&gt;
+
+&lt;p&gt;Сошлюсь на пример одного из моих учеников, который пришел ко мне при следующих обстоятельствах. Его отец поссорился с его матерью; кроме того, отец склонялся к сотрудничеству с оккупантами. Старший брат был убит во время наступления немцев в 1940 году. И этот юноша с несколько примитивными, но благородными чувствами хотел за него отомстить. Мать, очень опечаленная полуизменой мужа и смертью старшего сына, видела в нем единственное утешение. Перед этим юношей стоял выбор: или уехать в Англию и поступить в вооруженные силы «Сражающейся Франции», что значило покинуть мать, или же остаться и помогать ей. Он хорошо понимал, что мать живет им одним и что его уход, а возможно и смерть, ввергнет ее в полное отчаяние. Вместе с тем он сознавал, что в отношении матери каждое его действие имеет положительный, конкретный результат в том смысле, что помогает ей жить, тогда как каждое его действие, предпринятое для того, чтобы отправиться сражаться, неопределенно, двусмысленно, может не оставить никакого следа и не принести ни малейшей пользы: например, по пути в Англию, проезжая через Испанию, он может на бесконечно долгое время застрять в каком-нибудь испанском лагере, может, приехав в Англию или в Алжир, попасть в штаб писарем. Следовательно, перед ним были два совершенно различных типа действия, либо конкретные и немедленные действия, но обращенные только к одному человеку, либо действия, направленные на несравненно более широкое общественное целое, на всю нацию, но именно по этой причине имеющие неопределенный, двусмысленный характер и, возможно, безрезультатные.&lt;/p&gt;
+&lt;p&gt;Одновременно он колебался между двумя типами морали. С одной стороны, мораль симпатии, личной преданности, с другой стороны, мораль более широкая, но, может быть, менее действенная. Нужно было выбрать одну из двух. Кто мог помочь ему сделать этот выбор? Христианское учение? Нет. Христианское учение говорит: будьте милосердны, любите ближнего, жертвуйте собою ради других, выбирайте самый трудный путь и т.д. и т.п. Но какой из этих путей самый трудный? Кого нужно возлюбить, как ближнего своего: воина или мать? Как принести больше пользы: сражаясь вместе с другими – польза не вполне определенная, или же – вполне определенная польза – помогая жить конкретному существу? Кто может решать здесь a priori? Никто. Никакая писаная мораль не может дать ответ. Кантианская мораль гласит: никогда не рассматривайте других людей как средство, но лишь как цель. Прекрасно. Если я останусь с матерью, я буду видеть в ней цель, а не средство. Но тем самым я рискую видеть средство в тех людях, которые сражаются. И наоборот, если я присоединюсь к сражающимся, то буду рассматривать их как цель, но тем самым рискую видеть средство в собственной матери.&lt;/p&gt;
+&lt;p&gt;Если ценности неопределенны и если все они слишком широки для того конкретного случая, который мы рассматриваем, нам остается довериться инстинктам. Это и попытался сделать молодой человек. Когда я встретился с ним, он сказал: «В сущности, главное – чувство. Мне следует выбрать то, что меня действительно толкает в определенном направлении. Если я почувствую, что достаточно люблю свою мать, чтобы пожертвовать ради нее всем остальным – жаждой мести, жаждой действия, приключений, то я останусь с ней. Если же, наоборот, я почувствую, что моя любовь к матери недостаточна, тогда мне надо будет уехать». Но как определить значимость чувства? В чем значимость его чувства к матери? Именно в том, что он остается ради нее. Я могу сказать: «Я люблю своего приятеля достаточно сильно, чтобы пожертвовать ради него некоторой суммой денег». Но я могу сказать это лишь в том случае, если это уже сделано мною. Я могу сказать «Я достаточно люблю свою мать, чтобы остаться с ней», в том случае, если я с ней остался. Я могу установить значимость данного чувства лишь тогда, когда уже совершил поступок, который утверждает и определяет значимость чувства. Если же мне хочется, чтобы чувство оправдало мой поступок, я попадаю в порочный круг.&lt;/p&gt;
+&lt;p&gt;…Иначе говоря, чувство создается поступками, которые мы совершаем. Я не могу, следовательно, обратиться к чувству, чтобы им руководствоваться. А это значит, что я не могу ни искать в самом себе такое истинное состояние, которое побудило бы меня к действию, ни требовать от какой-либо морали, чтобы она предписала, как мне действовать. Однако, возразите вы, ведь он же обратился за советом к преподавателю. Дело в том, что, когда вы идете за советом, например, к священнику, значит, вы выбрали этого священника и, в сущности, вы уже более или менее представляли себе, что он вам посоветует. Иными словами, выбрать советчика – это опять-таки решиться на что-то самому. Вот вам доказательство: если вы христианин, вы скажете: «Посоветуйтесь со священником». Но есть священники-коллаборационисты, священники-выжидатели, священники – участники движения Сопротивления. Так кого же выбрать? И если юноша останавливает свой выбор на священнике – участнике Сопротивления или священнике-коллаборационисте, то он уже решил, каким будет совет. Обращаясь ко мне, он знал мой ответ, а я могу сказать только одно: вы свободны, выбирайте, то есть изобретайте.&lt;/p&gt;
+&lt;p&gt;Никакая всеобщая мораль вам не укажет, что нужно делать; в мире нет знамений. Католики возразят, что знамения есть. Допустим, что так, но и в этом случае я сам решаю, каков их смысл.&lt;/p&gt;
+&lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 1&#34; role=&#34;group&#34;&gt;&lt;div class=&#34;choicegroup capa_inputtype&#34; id=&#34;inputtype_7bc75d3157e74af2a19d91baf906066b_2_1&#34;&gt;
+    &lt;fieldset aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_2_1&#34;&gt;
+        &lt;legend id=&#34;7bc75d3157e74af2a19d91baf906066b_2_1-legend&#34; class=&#34;response-fieldset-legend field-group-hd&#34;&gt;Чтобы осуществить выбор в экзистенциальной ситуации, Сартр предлагает&lt;/legend&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_0&#34; class=&#34;field-input input-radio&#34; value=&#34;choice_0&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_2_1-choice_0-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_0&#34; class=&#34;response-label field-label label-inline&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_2_1&#34;&gt; Положиться на чувства
+            &lt;/label&gt;
+          &lt;/div&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_1&#34; class=&#34;field-input input-radio&#34; value=&#34;choice_1&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_2_1-choice_1-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_1&#34; class=&#34;response-label field-label label-inline&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_2_1&#34;&gt; Опереться на доволы разума
+            &lt;/label&gt;
+          &lt;/div&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_2&#34; class=&#34;field-input input-radio submitted&#34; value=&#34;choice_2&#34; checked=&#34;true&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_2_1-choice_2-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_2&#34; class=&#34;response-label field-label label-inline choicegroup_correct&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_2_1&#34;&gt; Довериться инстинктам
+            &lt;/label&gt;
+          &lt;/div&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_3&#34; class=&#34;field-input input-radio&#34; value=&#34;choice_3&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_2_1-choice_3-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_2_1_choice_3&#34; class=&#34;response-label field-label label-inline&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_2_1&#34;&gt; Обратиться за советом
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;span id=&#34;answer_7bc75d3157e74af2a19d91baf906066b_2_1&#34;/&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&#34;indicator-container&#34;&gt;
+          
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_7bc75d3157e74af2a19d91baf906066b_2_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 2&#34; role=&#34;group&#34;&gt;&lt;div class=&#34;choicegroup capa_inputtype&#34; id=&#34;inputtype_7bc75d3157e74af2a19d91baf906066b_3_1&#34;&gt;
+    &lt;fieldset aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_3_1&#34;&gt;
+        &lt;legend id=&#34;7bc75d3157e74af2a19d91baf906066b_3_1-legend&#34; class=&#34;response-fieldset-legend field-group-hd&#34;&gt;Обращаясь за советом, человек&lt;/legend&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_0&#34; class=&#34;field-input input-radio submitted&#34; value=&#34;choice_0&#34; checked=&#34;true&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_3_1-choice_0-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_0&#34; class=&#34;response-label field-label label-inline choicegroup_correct&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_3_1&#34;&gt; Пытается переложить ответственность на советчика
+            &lt;/label&gt;
+          &lt;/div&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_1&#34; class=&#34;field-input input-radio&#34; value=&#34;choice_1&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_3_1-choice_1-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_1&#34; class=&#34;response-label field-label label-inline&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_3_1&#34;&gt; Стремится облегчить муки выбора
+            &lt;/label&gt;
+          &lt;/div&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_2&#34; class=&#34;field-input input-radio&#34; value=&#34;choice_2&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_3_1-choice_2-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_2&#34; class=&#34;response-label field-label label-inline&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_3_1&#34;&gt; Проконсультироваться относительно вечных ценностей
+            &lt;/label&gt;
+          &lt;/div&gt;
+          
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;input type=&#34;radio&#34; name=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1&#34; id=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_3&#34; class=&#34;field-input input-radio&#34; value=&#34;choice_3&#34;/&gt;&lt;label id=&#34;7bc75d3157e74af2a19d91baf906066b_3_1-choice_3-label&#34; for=&#34;input_7bc75d3157e74af2a19d91baf906066b_3_1_choice_3&#34; class=&#34;response-label field-label label-inline&#34; aria-describedby=&#34;status_7bc75d3157e74af2a19d91baf906066b_3_1&#34;&gt; Надеется узнать, как поступить в сложной ситуации
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;span id=&#34;answer_7bc75d3157e74af2a19d91baf906066b_3_1&#34;/&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&#34;indicator-container&#34;&gt;
+          
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_7bc75d3157e74af2a19d91baf906066b_3_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+  &lt;div class=&#34;action&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;problem_id&#34; value=&#34;Задание 1&#34; /&gt;
+
+    &lt;div class=&#34;problem-action-buttons-wrapper&#34;&gt;
+      &lt;span class=&#34;problem-action-button-wrapper&#34;&gt;
+          &lt;button type=&#34;button&#34; class=&#34;show problem-action-btn btn-link btn-small&#34; aria-describedby=&#34;7bc75d3157e74af2a19d91baf906066b-problem-title&#34;&gt;&lt;span class=&#34;show-label&#34;&gt;Show answer&lt;/span&gt;&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;submit-attempt-container&#34;&gt;
+      &lt;button type=&#34;button&#34; class=&#34;submit btn-brand&#34; data-submitting=&#34;Submitting&#34; data-value=&#34;Submit&#34; data-should-enable-submit-button=&#34;False&#34; aria-describedby=&#34;submission_feedback_7bc75d3157e74af2a19d91baf906066b&#34; disabled&gt;
+          &lt;span class=&#34;submit-label&#34;&gt;Submit&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;div class=&#34;submission-feedback &#34; id=&#34;submission_feedback_7bc75d3157e74af2a19d91baf906066b&#34;&gt;
+          You have used 1 of 2 attempts
+        &lt;span class=&#34;sr&#34;&gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+
+
+&lt;div class=&#34;notification warning notification-gentle-alert
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-exclamation-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;7bc75d3157e74af2a19d91baf906066b-problem-title&#34;&gt;
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+
+
+&lt;div class=&#34;notification warning notification-save
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-save&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;7bc75d3157e74af2a19d91baf906066b-problem-title&#34;&gt;None
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+    
+
+
+&lt;div class=&#34;notification general notification-show-answer
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-info-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;7bc75d3157e74af2a19d91baf906066b-problem-title&#34;&gt;Answers are displayed within the problem
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, &#39;*&#39;);
+    }
+&lt;/script&gt;
+"
+     data-graded="True">
+    <p class="loading-spinner">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <span class="sr">Loading&hellip;</span>
+    </p>
+</div>
+
+</div>
+
+    </div>
+    <div class="vert vert-1" data-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@1e6f101f67cf4c30956720b63f21f7ef">
+        
+<div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:spbstu+PHYLOS+fall_2022_z" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@1e6f101f67cf4c30956720b63f21f7ef" data-request-token="2ba81d3c636b11ee932cf6993726f066" data-graded="True" data-has-score="True">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Problem"}
+  </script>
+  <div id="problem_1e6f101f67cf4c30956720b63f21f7ef" class="problems-wrapper" role="group"
+     aria-labelledby="1e6f101f67cf4c30956720b63f21f7ef-problem-title"
+     data-problem-id="block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@1e6f101f67cf4c30956720b63f21f7ef" data-url="/courses/course-v1:spbstu+PHYLOS+fall_2022_z/xblock/block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@1e6f101f67cf4c30956720b63f21f7ef/handler/xmodule_handler"
+     data-problem-score="1.0"
+     data-problem-total-possible="1.0"
+     data-attempts-used="1"
+     data-content="
+
+
+
+&lt;h3 class=&#34;hd hd-3 problem-header&#34; id=&#34;1e6f101f67cf4c30956720b63f21f7ef-problem-title&#34; aria-describedby=&#34;block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@1e6f101f67cf4c30956720b63f21f7ef-problem-progress&#34; tabindex=&#34;-1&#34;&gt;
+  Задание 2
+&lt;/h3&gt;
+
+&lt;div class=&#34;problem-progress&#34; id=&#34;block-v1:spbstu+PHYLOS+fall_2022_z+type@problem+block@1e6f101f67cf4c30956720b63f21f7ef-problem-progress&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;problem&#34;&gt;
+  &lt;div&gt;
+&lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 1&#34; role=&#34;group&#34;&gt;&lt;p&gt;Пожалуйста, отвечайте ОДНИМ словом.&lt;/p&gt;
+&lt;div id=&#34;inputtype_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; class=&#34; capa_inputtype  textline&#34;&gt;
+
+    &lt;div class=&#34;correct &#34;&gt;
+
+
+    &lt;label class=&#34;problem-group-label&#34; for=&#34;input_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; id=&#34;label_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34;&gt;По Сартру, чувство порождает поступок или порождается им?&lt;/label&gt;
+
+&lt;input type=&#34;text&#34; name=&#34;input_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; id=&#34;input_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; aria-describedby=&#34;status_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; value=&#34;порождается&#34; autocomplete=&#34;off&#34; size=&#34;20&#34;/&gt;
+&lt;span class=&#34;trailing_text&#34; id=&#34;trailing_text_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34;/&gt;
+
+
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+
+&lt;p id=&#34;answer_1e6f101f67cf4c30956720b63f21f7ef_2_1&#34; class=&#34;answer&#34;/&gt;
+
+
+    &lt;/div&gt;
+
+
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&#34;action&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;problem_id&#34; value=&#34;Задание 2&#34; /&gt;
+
+    &lt;div class=&#34;problem-action-buttons-wrapper&#34;&gt;
+      &lt;span class=&#34;problem-action-button-wrapper&#34;&gt;
+          &lt;button type=&#34;button&#34; class=&#34;show problem-action-btn btn-link btn-small&#34; aria-describedby=&#34;1e6f101f67cf4c30956720b63f21f7ef-problem-title&#34;&gt;&lt;span class=&#34;show-label&#34;&gt;Show answer&lt;/span&gt;&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;submit-attempt-container&#34;&gt;
+      &lt;button type=&#34;button&#34; class=&#34;submit btn-brand&#34; data-submitting=&#34;Submitting&#34; data-value=&#34;Submit&#34; data-should-enable-submit-button=&#34;False&#34; aria-describedby=&#34;submission_feedback_1e6f101f67cf4c30956720b63f21f7ef&#34; disabled&gt;
+          &lt;span class=&#34;submit-label&#34;&gt;Submit&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;div class=&#34;submission-feedback &#34; id=&#34;submission_feedback_1e6f101f67cf4c30956720b63f21f7ef&#34;&gt;
+          You have used 1 of 1 attempt
+        &lt;span class=&#34;sr&#34;&gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+
+
+&lt;div class=&#34;notification warning notification-gentle-alert
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-exclamation-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;1e6f101f67cf4c30956720b63f21f7ef-problem-title&#34;&gt;
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+
+
+&lt;div class=&#34;notification warning notification-save
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-save&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;1e6f101f67cf4c30956720b63f21f7ef-problem-title&#34;&gt;None
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+    
+
+
+&lt;div class=&#34;notification general notification-show-answer
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-info-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;1e6f101f67cf4c30956720b63f21f7ef-problem-title&#34;&gt;Answers are displayed within the problem
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, &#39;*&#39;);
+    }
+&lt;/script&gt;
+"
+     data-graded="True">
+    <p class="loading-spinner">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <span class="sr">Loading&hellip;</span>
+    </p>
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['https://cdn2.openedu.ru/static/js/dateutil_factory.a28baef97506.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+<script>
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+</script>
+
+</div>
+
+      </main>
+  </section>
+</div>
+
+<script type="text/javascript">
+  (function() {
+    // If this view is rendered in an iframe within the learning microfrontend app
+    // it will report the height of its contents to the parent window when the
+    // document loads, window resizes, or DOM mutates.
+    if (window !== window.parent) {
+      document.body.className += ' view-in-mfe';
+      var lastHeight = window.offsetHeight;
+      var lastWidth = window.offsetWidth;
+      var contentElement = document.getElementById('content');
+
+      function dispatchResizeMessage(event) {
+        // Note: event is actually an Array of MutationRecord objects
+        // when fired from the MutationObserver
+        var eventType = event.type || 'mutate';
+        var newHeight = contentElement.offsetHeight;
+        var newWidth = contentElement.offsetWidth;
+        if (eventType !== 'load' && newWidth === lastWidth && newHeight === lastHeight) {
+            // Monitor when any anchor tag is clicked, it is checked to make sure
+            // it is referencing an element's id or name (not an external website). If
+            // the href attribute is an id or name, the location of the selected focus
+            // element is sent through its offset attribute. The offset will
+            // allow the page to scroll to the location of the focus element so
+            // that it is at the top of the page. Unique ids and names are
+            // required for proper scrolling.
+            $('a').on("click", function(event){
+              if ($(this).attr('href')[0] === "#") {
+                var targetId = $(this).attr('href');
+                var targetName = $(this).attr('href').slice(1);
+                // Checks if the target uses an id or name to focus and gets offset.
+                var targetOffset = $(targetId).offset() || $(document.getElementsByName(targetName)[0]).offset();
+                if (targetOffset) {
+                  event.preventDefault();
+                  window.parent.postMessage({"offset": targetOffset.top}, document.referrer);
+                }
+              }
+            })
+          return;
+        }
+        // Monitor for messages and checks if the message contains an id. If
+        // there is an id, then the location of the selected focus element
+        // is sent through its offset attribute. The offset will allow the
+        // page to scroll to the location of the focus element so that it is
+        // at the top of the page. Unique ids and names are required for
+        // proper scrolling.
+        window.addEventListener('message', function (event) {
+          if (event.data.hashName) {
+            var targetId = event.data.hashName;
+            var targetName = event.data.hashName.slice(1);
+            // Checks if the target uses an id or name to focus and gets offset.
+            var targetOffset = $(targetId).offset() || $(document.getElementsByName(targetName)[0]).offset();
+            window.parent.postMessage({ 'offset': targetOffset.top }, document.referrer);
+          }
+        })
+
+        window.parent.postMessage({
+            type: 'plugin.resize',
+            payload: {
+              width: newWidth,
+              height: newHeight,
+            }
+          }, document.referrer
+        );
+
+        lastHeight = newHeight;
+        lastWidth = newWidth;
+
+        // Within the learning microfrontend the iframe resizes to match the
+        // height of this document and it should never scroll. It does scroll
+        // ocassionally when javascript is used to focus elements on the page
+        // before the parent iframe has been resized to match the content
+        // height. This window.scrollTo is an attempt to keep the content at the
+        // top of the page. See TNL-7094
+        window.scrollTo(0, 0);
+      }
+
+      // Create an observer instance linked to the callback function
+      const observer = new MutationObserver(dispatchResizeMessage);
+
+      // Start observing the target node for configured mutations
+      observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+      window.addEventListener('load', dispatchResizeMessage);
+      window.addEventListener('resize', dispatchResizeMessage);
+    }
+  }());
+</script>
+
+      
+    </div>
+
+
+
+  
+  
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/common/js/vendor/jquery.scrollTo.525edcc52fe8.js" async></script>
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/vendor/flot/jquery.flot.d3d45ff0c6a8.js" async></script>
+
+  
+    
+<script type="text/javascript" src="https://cdn2.openedu.ru/static/js/lms-courseware.9517dcd2081d.js" charset="utf-8"></script>
+
+
+
+    
+
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    messageStyle: "none",
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+<script type="text/javascript">
+    // Activating Mathjax accessibility files
+    window.MathJax = {
+        menuSettings: {
+            collapsible: true,
+            autocollapse: false,
+            explorer: true
+        }
+    };
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_SVG"></script>
+
+
+<script src='https://cdn2.openedu.ru/static/bundles/ProblemBlockPreview.3c293987029be310b69a.40765775f6c6.js' type='application/javascript'></script>
+<script src='https://cdn2.openedu.ru/static/bundles/XModuleShim.b0a0bcfa4bfc116299b0.0021dbb8621f.js' type='application/javascript'></script>
+<script src='https://cdn2.openedu.ru/static/bundles/VerticalStudentView.218999454019487e3bbe.50411955078b.js' type='application/javascript'></script>
+
+
+
+  
+
+
+
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/utils/navigation.08930e16ab3d.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/header/header.309a1243e175.js"></script>
+  
+  <script type="text/javascript" src="https://cdn2.openedu.ru/static/js/src/jquery_extend_patch.54dddef28d15.js"></script>
+  <div id="lean_overlay"></div>
+
+</body>
+</html>
+
+
